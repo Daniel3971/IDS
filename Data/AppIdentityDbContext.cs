@@ -1,6 +1,12 @@
-﻿namespace MyWebApi.Data
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
+using MyWebApi.Models.Identity; // Your ApplicationUser and ApplicationRole
+
+public class AppIdentityDbContext : IdentityDbContext<ApplicationUser, IdentityRole, string>
 {
-    public class Class
+    public AppIdentityDbContext(DbContextOptions<AppIdentityDbContext> options)
+        : base(options)
     {
     }
 }

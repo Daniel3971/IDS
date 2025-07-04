@@ -1,6 +1,9 @@
-﻿namespace MyWebApi.Models.Identity
+﻿using Microsoft.AspNetCore.Identity;
+
+namespace MyWebApi.Models.Identity
 {
-    public class Class
+    public class ApplicationUser : IdentityUser
     {
+        // ...
     }
 }
